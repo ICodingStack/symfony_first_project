@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %} Question {{ question }} {% endblock %}
+{% block body %}
+<h1>
+    {{  question }}
+</h1>
+<div>
+    This iS First View Page
+</div>
+{#
+   twig fillter is function like length
+   we can use any filter by just add | then the name of fillter
+   for ex:
+   answers|length
+ #}
+<h1>Answers ({{ answers|length }})</h1>
+<ul>
+    {% for answer in answers %}
+     <li>{{  answer }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
