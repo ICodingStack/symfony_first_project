@@ -13,10 +13,10 @@ class HomeController extends AbstractController
    // extends the controller from AbstractController to help us get shortcut for ailas
     // composer require annotantion liobary to add route before any function
     /**
-     *@Route("/hello")
+     *@Route("/")
      */
     public function HomePage(){
-       return new Response('hello this is the first route');
+      return $this->render('questions/homepage.html.twig');
     }
 
     /**
